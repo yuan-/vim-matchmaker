@@ -99,6 +99,10 @@ function! s:toggle()
     endif
 endfunction
 
+function! s:DefineHighlightings()
+  hi default Matchmaker term=underline    ctermbg=238     guibg=#dddddd
+endfunction
+
 " }}}
 
 " [ Commands ] {{{
@@ -112,7 +116,8 @@ command! -nargs=0 MatchmakerToggle call s:toggle()
 
 augroup Matchmaker
     au!
-    au CursorMoved,CursorMovedI,WinEnter,VimEnter * call s:matchmake(s:needle())
+    autocmd ColorScheme * call <SID>DefineHighlightings()
+    au CursorHold * call s:matchmake(s:needle())
     au WinLeave * call s:matchunmake()
 augroup END
 
