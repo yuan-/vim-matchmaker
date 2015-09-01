@@ -100,7 +100,10 @@ function! s:toggle()
 endfunction
 
 function! s:DefineHighlightings()
-  hi default Matchmaker term=underline    ctermbg=238     guibg=#dddddd
+  "hi default Matchmaker term=underline    ctermbg=238     guibg=#dddddd
+  "hi default Matchmaker term=underline    ctermbg=238     guibg=#D1C300
+  "hi default Matchmaker term=underline    ctermbg=238     guibg=#69ADFF
+  hi default Matchmaker term=underline    ctermbg=238     guibg=#90F0CF
 endfunction
 
 " }}}
