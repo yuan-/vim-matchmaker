@@ -135,8 +135,8 @@ command! -nargs=0 MatchmakerToggle call s:toggle()
 
 augroup Matchmaker
     au!
-    autocmd ColorScheme * call <SID>DefineHighlightings()
     au CursorMoved,CursorMovedI,WinEnter,VimEnter * call s:matchmake(s:needle())
+    autocmd Syntax,ColorScheme * call <SID>DefineHighlightings()
     "au CursorHold,CursorHoldI * call s:matchmake(s:needle())
     au WinLeave * call s:matchunmake()
 augroup END
