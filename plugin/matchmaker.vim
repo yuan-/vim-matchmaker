@@ -54,6 +54,7 @@ function! s:enable(enabled)
     if !s:enabled
         call s:matchunmake()
     else
+        call <SID>DefineHighlightings()
         call s:matchmake(s:needle())
     endif
 endfunction
